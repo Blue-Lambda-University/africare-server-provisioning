@@ -1,0 +1,5 @@
+- name: Configure EC2 dev machine
+  hosts: ec2
+  become: true
+  roles:
+    - setup_dev_tools
