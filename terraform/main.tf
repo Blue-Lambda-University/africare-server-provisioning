@@ -20,7 +20,7 @@ resource "aws_instance" "dev_ec2" {
   }
 
   provisioner "local-exec" {
-    command = "echo ${self.public_ip} > ../ansible/inventory.ini"
+    command = "echo ${self.public_ip} ansible_user=ubuntu ansible_ssh_private_key_file=${self.public_key} > ../ansible/inventory.ini"
   }
 }
 

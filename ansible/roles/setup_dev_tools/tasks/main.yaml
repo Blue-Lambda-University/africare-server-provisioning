@@ -3,6 +3,14 @@
     update_cache: yes
     cache_valid_time: 3600
 
+- name: Install Git, unzip, and make
+  apt:
+    name:
+      - git
+      - unzip
+      - make
+    state: present
+
 - name: Install OpenJDK 17
   apt:
     name: openjdk-17-jdk

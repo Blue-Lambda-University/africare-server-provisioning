@@ -14,6 +14,8 @@ sudo apt install -y \
     gnupg \
     lsb-release
 
+sudo apt install unzip
+
 # Add Docker’s official GPG key
 sudo mkdir -m 0755 -p /etc/apt/keyrings
 curl -fsSL https://download.docker.com/linux/ubuntu/gpg | \

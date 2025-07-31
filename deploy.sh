@@ -16,6 +16,7 @@ echo "Terraform provisioning complete."
 
 echo "Fetching public IP of the EC2 instance..."
 EC2_IP=$(terraform output -raw public_ip)
+EC2_PEM=$(terraform output -raw public_key_path)
 
 cd -
 
